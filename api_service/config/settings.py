@@ -33,8 +33,9 @@ DEBUG = True
 ALLOWED_HOSTS = ['*',"meta-service"]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://43.204.221.20",
 ]
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
