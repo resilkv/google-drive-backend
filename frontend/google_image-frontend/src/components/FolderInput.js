@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const FolderInput = ({ onSubmit }) => {
   const [folderUrl, setFolderUrl] = useState("");
@@ -7,6 +8,15 @@ const FolderInput = ({ onSubmit }) => {
     e.preventDefault();
     if (folderUrl) {
       onSubmit(folderUrl);
+      toast.info("Images will be uploaded, please wait...", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
       setFolderUrl("");
     }
   };
