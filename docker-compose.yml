@@ -48,3 +48,5 @@ services:
     ports:
       - "80:80"
     restart: always
+    env_file:
+    - .env
