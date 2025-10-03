@@ -20,7 +20,8 @@ const ImageList = ({ images }) => {
           padding: "8px",
           borderRadius: "4px",
           textAlign: "center",
-          width: "200px", // adjust as needed
+          width: "220px", // fixed width
+          wordBreak: "break-word", // wrap long text
         }}
       >
         <img
