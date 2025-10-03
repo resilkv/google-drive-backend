@@ -49,4 +49,4 @@ services:
       - "80:80"
     restart: always
     env_file:
-    - /frontend/google_image-frontend/.env
+    - ./frontend/google_image-frontend/.env
