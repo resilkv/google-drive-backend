@@ -33,7 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['*',"meta-service","43.204.107.183"]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://43.204.107.183/",
+    "http://43.204.107.183",
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
