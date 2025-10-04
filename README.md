@@ -29,14 +29,14 @@ Navigate into each service and create a .env file.
 Sample .env-example files are provided in respective folders.
 
 
-### cd api_service
-# create .env (refer .env-example)
+cd api_service
+### create .env (refer .env-example)
 
-### cd ../meta_service
-# create .env (refer .env-example)
+cd ../meta_service
+### create .env (refer .env-example)
 
-### cd ../frontend/google_image-frontend
-# create .env (manual configuration)
+cd ../frontend/google_image-frontend
+### create .env (manual configuration)
 
 Google Drive API Setup
 
