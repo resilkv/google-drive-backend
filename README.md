@@ -26,14 +26,14 @@ Environment Variables
 
 Navigate into each service and create a .env file.
 
-**Sample .env-example files are provided in respective folders**
+2.**Sample .env-example files are provided in respective folders**
     ```bash
     cd api_service
     create .env (refer .env-example)
-    ```bash
+
     cd ../meta_service
     create .env (refer .env-example)
-    ```bash
+
     cd ../frontend/google_image-frontend
     create .env (manual configuration)
 ---
