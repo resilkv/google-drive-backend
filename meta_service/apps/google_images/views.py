@@ -93,7 +93,13 @@ class GoogleImageListing(APIView):
 
     def get(self,request,*arg,**kwrg):
 
-        queryset = GoogleImage.objects.all()
-        serializer =  self.serializer(queryset,many=True)
+        try:
 
-        return Response({"status_code": 200,"data": serializer.data},status=status.HTTP_200_OK)
+            queryset = GoogleImage.objects.all()
+            serializer =  self.serializer(queryset,many=True)
+
+            return Response({"status_code": 200,"data": serializer.data},status=status.HTTP_200_OK)
+        
+        except Exception as e:
+            return Response({"status_code": 500, "error": str(e)},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
