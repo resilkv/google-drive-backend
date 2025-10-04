@@ -46,7 +46,7 @@ Download the service account JSON file.
 
 Save it as service-account.json in both api_service and meta_service.
 
-Run with Docker Compose
+## Run with Docker Compose
 
 
 docker-compose build
