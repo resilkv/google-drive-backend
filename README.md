@@ -58,7 +58,7 @@ api_service → http://localhost:8001
 
 meta_service → http://localhost:8000
 
-**API Documentation
+# API Documentation
 1. Upload Google Drive Folder URL
 Endpoint:
 POST /api/image-processing/
@@ -77,7 +77,7 @@ Response:
   "imported_files": ["image1.jpg", "image2.png"]
 }
 
-**Architecture
+# Architecture
 
 Frontend (React)
 Provides the UI to paste Google Drive folder URL and display images.
@@ -94,7 +94,7 @@ Stores image details and metadata.
 Storage (Amazon S3)
 Image files are stored securely in AWS S3.
 
-**Scalability Notes
+# Scalability Notes
 Microservice Architecture → Each service (Frontend, API, Meta) can scale independently.
 
 Asynchronous Processing → Celery + Redis can handle large folder imports in the background.
@@ -103,13 +103,13 @@ Cloud Storage → Large image sets stored in S3 or Google Cloud Storage.
 
 Future Improvements → Add load balancing (Nginx/HAProxy) and pagination for handling thousands of images.
 
-**API Documentation URLs
+# API Documentation URLs
 
 api_service → http://43.204.107.183:8001/api/docs/
 
 meta_service → http://43.204.107.183:8000/api/docs/
 
-**Notes
+# Notes
 Ensure .env files are configured correctly before starting services.
 
 Google Drive folder must be shared with view access for the service account to fetch files.
