@@ -27,6 +27,7 @@ Environment Variables
 Navigate into each service and create a .env file.
 
 2.**Sample .env-example files are provided in respective folders**
+    
     ```bash
     cd api_service
     create .env (refer .env-example)
