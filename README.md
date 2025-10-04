@@ -5,14 +5,14 @@
 
 ---
 
-## 📌 Overview
+##  Overview
 This project enables you to paste a **Google Drive folder URL**, automatically fetch all images from it, and store them in the backend for later retrieval.  
 
 The system follows a **microservice-based architecture** with **separate frontend and backend services** for scalability and modularity.
 
 ---
 
-## 🛠️ Setup Instructions
+##  Setup Instructions
 
 ### 🔹 Local Setup
 
@@ -29,13 +29,13 @@ Navigate into each service and create a .env file.
 Sample .env-example files are provided in respective folders.
 
 
-cd api_service
+### cd api_service
 # create .env (refer .env-example)
 
-cd ../meta_service
+### cd ../meta_service
 # create .env (refer .env-example)
 
-cd ../frontend/google_image-frontend
+### cd ../frontend/google_image-frontend
 # create .env (manual configuration)
 
 Google Drive API Setup
