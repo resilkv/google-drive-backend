@@ -20,14 +20,15 @@ The system follows a **microservice-based architecture** with **separate fronten
    ```bash
    git clone https://github.com/resilkv/google-drive-backend.git
    cd google-drive-backend
+
+
 Environment Variables
 
 Navigate into each service and create a .env file.
 
 Sample .env-example files are provided in respective folders.
 
-bash
-Copy code
+
 cd api_service
 # create .env (refer .env-example)
 
@@ -36,6 +37,7 @@ cd ../meta_service
 
 cd ../frontend/google_image-frontend
 # create .env (manual configuration)
+
 Google Drive API Setup
 
 Enable Google Drive API in Google Cloud Console.
@@ -46,37 +48,37 @@ Save it as service-account.json in both api_service and meta_service.
 
 Run with Docker Compose
 
-bash
-Copy code
+
 docker-compose build
 docker-compose up -d
+
 Frontend → http://localhost:3000
 
 api_service → http://localhost:8001
 
 meta_service → http://localhost:8000
 
-📡 API Documentation
+**API Documentation
 1. Upload Google Drive Folder URL
 Endpoint:
 POST /api/image-processing/
 
 Request Body:
 
-json
-Copy code
+
 {
   "folder_url": "https://drive.google.com/drive/folders/<folder-id>"
 }
+
 Response:
 
-json
-Copy code
 {
   "status": "success",
   "imported_files": ["image1.jpg", "image2.png"]
 }
-🏗️ Architecture
+
+**Architecture
+
 Frontend (React)
 Provides the UI to paste Google Drive folder URL and display images.
 
@@ -92,7 +94,7 @@ Stores image details and metadata.
 Storage (Amazon S3)
 Image files are stored securely in AWS S3.
 
-⚖️ Scalability Notes
+**Scalability Notes
 Microservice Architecture → Each service (Frontend, API, Meta) can scale independently.
 
 Asynchronous Processing → Celery + Redis can handle large folder imports in the background.
@@ -101,12 +103,13 @@ Cloud Storage → Large image sets stored in S3 or Google Cloud Storage.
 
 Future Improvements → Add load balancing (Nginx/HAProxy) and pagination for handling thousands of images.
 
-📑 API Documentation URLs
+**API Documentation URLs
+
 api_service → http://43.204.107.183:8001/api/docs/
 
 meta_service → http://43.204.107.183:8000/api/docs/
 
-📝 Notes
+**Notes
 Ensure .env files are configured correctly before starting services.
 
 Google Drive folder must be shared with view access for the service account to fetch files.
